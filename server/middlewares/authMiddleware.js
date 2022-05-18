@@ -12,4 +12,4 @@ const checkAuth = (req, res, next) => {
     next();
   };
   
-  module.exports = { checkAuth, checkNotAuth };
+module.exports = { checkAuth, checkNotAuth };
