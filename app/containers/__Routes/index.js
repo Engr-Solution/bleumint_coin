@@ -4,6 +4,7 @@ import PrivateRoute from 'containers/_PrivateRoute';
 import PublicRoute from 'containers/_PublicRoute';
 
 // Private components
+
 import Dashboard from 'containers/Dashboard/Loadable'
 import UserComponent from 'containers/UserComponent/Loadable'
 import PendingIdVarification from 'containers/PendingIdVarification/Loadable'
@@ -28,9 +29,16 @@ import AddFaqs from 'containers/AddFaqs/Loadable'
 import BulkEmail from 'containers/BulkEmail/Loadable'
 import WithdrawalHistory from 'containers/WithdrawalHistory/Loadable'
 import Transaction from 'containers/Transaction/Loadable'
+import Auth from 'containers/Auth';
 const Routes = () => {
     return (
         <Switch>
+           <PublicRoute
+                exact
+                path="/login"
+                component={Auth}
+                titles={['login']}
+            />
             <PrivateRoute
                 exact
                 path="/"

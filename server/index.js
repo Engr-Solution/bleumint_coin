@@ -14,6 +14,11 @@ const ngrok =
 const { resolve } = require('path');
 const app = express();
 
+// AUTHENTICATION FILES
+
+// Everything about Social Authentication is in the module (AuthRouter) below, you can go ahead and connect it to your app as you wish
+const AuthRouter = require('./authRoutes');
+
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
 
